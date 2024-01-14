@@ -1,18 +1,18 @@
 // Compare two dictionaries
 
-let compare = (first_values, ...parameters_LIST) => {
+let compareTwoDictionaries = (first_values, ...parameters_LIST) => {
   const second_values = parameters_LIST[0];
-  let a = Object.keys(first_values);
-  let b = Object.keys(second_values);
-  if (a.join('-') !== b.join('-')) return false;
-  let e = true;
-  for (c of a) {
-    if (first_values[c] === second_values[c]) e = e && true;
+  let arrOfFirstKeys = Object.keys(first_values);
+  let arrOfSecondKeys = Object.keys(second_values);
+  if (arrOfFirstKeys.join('-') !== arrOfSecondKeys.join('-')) return false;
+  let boolFlag = true;
+  for (element of arrOfFirstKeys) {
+    if (first_values[element] === second_values[element]) boolFlag = boolFlag && true;
     else {
-      e = e && false;
+      boolFlag = boolFlag && false;
     }
   }
-  return e;
+  return boolFlag;
 };
 
-module.exports = compare;
+module.exports = compareTwoDictionaries;
