@@ -1,6 +1,7 @@
 // Return an array with duplicates
 
-arrWithDuplicates = (value, size) => {
+'use strict'
+const arrWithDuplicates = (value, size) => {
   if (size <= 0) {
     return [];
   } else {
@@ -8,5 +9,4 @@ arrWithDuplicates = (value, size) => {
     return newArr;
   }
 };
-
 module.exports = arrWithDuplicates;
