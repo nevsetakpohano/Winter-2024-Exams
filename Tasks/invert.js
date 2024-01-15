@@ -1,10 +1,10 @@
 // Reverse an array, you can't use .reverse()
 
 invert = (A) => {
-  T = Object.keys(A);
-  T.forEach((i) => {
-    T[i] = A.pop();
-  });
+  T = [];
+  for(let i=0; i < A.length; i++){
+    T.unshift(A[i]);
+  }
   return T;
 };
 
