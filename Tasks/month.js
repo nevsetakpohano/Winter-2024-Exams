@@ -1,6 +1,6 @@
 // Get month number
 
-Months = [
+arrMonths = [
   'jan',
   'feb',
   'mar',
@@ -15,12 +15,12 @@ Months = [
   'dec',
 ];
 
-Month = (s) => {
-  l = Months.length;
+month = (nameOfMonth) => {
+  l = arrMonths.length;
   for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+    if (nameOfMonth.toLowerCase().startsWith(arrMonths[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = month;
