@@ -16,11 +16,14 @@ arrMonths = [
 ];
 
 month = (nameOfMonth) => {
-  l = arrMonths.length;
-  for (let i = 0; i < l; i++) {
-    if (nameOfMonth.toLowerCase().startsWith(arrMonths[i])) return i + 1;
+
+  for (let i = 0; i < arrMonths.length; i++) {
+    if (nameOfMonth.toLowerCase().startsWith(arrMonths[i])) {
+      return i + 1;
+    }
   }
   return -1;
+
 };
 
 module.exports = month;
