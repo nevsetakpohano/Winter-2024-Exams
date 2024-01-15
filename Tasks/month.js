@@ -1,21 +1,9 @@
 // Get month number
 
-arrMonths = [
-  'jan',
-  'feb',
-  'mar',
-  'apr',
-  'may',
-  'jun',
-  'jul',
-  'aug',
-  'sep',
-  'oct',
-  'nov',
-  'dec',
-];
+'use strict'
+const arrMonths = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
-month = (nameOfMonth) => {
+const month = (nameOfMonth) => {
 
   for (let i = 0; i < arrMonths.length; i++) {
     if (nameOfMonth.toLowerCase().startsWith(arrMonths[i])) {
@@ -23,7 +11,8 @@ month = (nameOfMonth) => {
     }
   }
   return -1;
-
+  
 };
+module.exports = month;
 
 module.exports = month;
