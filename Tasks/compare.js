@@ -1,18 +1,16 @@
 // Compare two dictionaries
 
-'use strict'
-let compareTwoDictionaries = (first_values, second_values) => {
-  const arrOfFirstKeys = Object.keys(first_values);
-  const arrOfSecondKeys = Object.keys(second_values);
+"use strict";
+let compareTwoDictionaries = (firstValues, secondValues) => {
+  const arrOfFirstKeys = Object.keys(firstValues);
+  const arrOfSecondKeys = Object.keys(secondValues);
   let boolFlag = true;
-  
-  if (arrOfFirstKeys.join('-') !== arrOfSecondKeys.join('-')) return false;
-  
+  if (arrOfFirstKeys.join("-") !== arrOfSecondKeys.join("-")) return false;
   for (const element of arrOfFirstKeys) {
-    if (first_values[element] === second_values[element]) {
-      boolFlag &&= true;
+    if (firstValues[element] === secondValues[element]) {
+      boolFlag = boolFlag && true;
     } else {
-      boolFlag &&= false;
+      boolFlag = boolFlag && false;
     }
   }
   return boolFlag;
